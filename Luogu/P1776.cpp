@@ -22,10 +22,17 @@ int main() {
     for (int i = 1; i <= n; i++) {
         int v, w, m;
         cin >> v >> w >> m;
-        for (int j = 1; j <= m; j++) {
-            item[++tot].v = v;
-            item[tot].w = w;
+        // 二进制分组优化
+        int c = 1;
+        while (m - c > 0) {
+            m -= c;
+            item[++tot].v = c * v;
+            item[tot].w = c * w;
+            c *= 2;
         }
+
+        item[++tot].v = m * v;
+        item[tot].w = m * w;
     }
 
     n = tot;

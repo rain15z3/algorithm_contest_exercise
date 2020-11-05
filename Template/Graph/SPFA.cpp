@@ -67,7 +67,7 @@ int main() {
         Edge::addEdge(v, u, w);
     }
 
-    
+    spfa(s);
 
     for (int i = 1; i <= n; i++)
         cout << dis[i] << " ";

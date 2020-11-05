@@ -36,3 +36,4 @@ Tempcode/
 *.in
 *.out
 *.solve.cpp
+*.py
